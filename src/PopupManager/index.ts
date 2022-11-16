@@ -2,7 +2,7 @@ import { PopupItem } from "../PopupItem";
 import {uniqueId} from 'lodash';
 import { PopupInstance, PopupProps } from "../models";
 
-export type OpenPopupOptions<T> = Omit<T & PopupProps, 'show'>;
+export type OpenPopupOptions<T> = Omit<T & PopupProps, 'show' | 'onCloseClick'>;
 
 export class PopupManager {
     private openPopups: PopupItem[] = [];
